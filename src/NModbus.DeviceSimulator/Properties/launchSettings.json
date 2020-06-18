@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NModbus.DeviceSimulator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Device__Verbose": "true"
+      }
+    }
+  }
+}

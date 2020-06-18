@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NModbus.DeviceSimulator", "NModbus.DeviceSimulator\NModbus.DeviceSimulator.csproj", "{376B5939-85D5-4772-91FA-819C0E4F5115}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{376B5939-85D5-4772-91FA-819C0E4F5115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376B5939-85D5-4772-91FA-819C0E4F5115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376B5939-85D5-4772-91FA-819C0E4F5115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376B5939-85D5-4772-91FA-819C0E4F5115}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A235B6F-2AA3-443F-B01C-3AEFAF5C39EB}
+	EndGlobalSection
+EndGlobal
