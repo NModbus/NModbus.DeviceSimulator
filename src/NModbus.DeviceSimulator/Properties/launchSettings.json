@@ -3,7 +3,11 @@
     "NModbus.DeviceSimulator": {
       "commandName": "Project",
       "environmentVariables": {
-        "Device__Verbose": "true"
+        "Device__Verbose": "true",
+        "Device__DeviceType": "Udp",
+        "Device__UnitIds": "1, 2, 3, 4, 20" 
+          
+          
       }
     }
   }

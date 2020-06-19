@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NModbus.DeviceSimulator;
-using System;
+using NModbus.DeviceSimulator.Devices;
 using System.Threading.Tasks;
 
 namespace NModbus.DeviceSimulator
@@ -37,6 +36,24 @@ namespace NModbus.DeviceSimulator
 
                         return deviceConfiguration;
                     });
+
+                    services.AddSingleton<IModbusFactory>(serviceProvider => {
+
+                        var deviceConfiguration = serviceProvider.GetRequiredService<DeviceConfiguration>();
+
+                        if (deviceConfiguration.Verbose)
+                        {
+                            var modbusLogger = serviceProvider.GetRequiredService<IModbusLogger>();
+
+                            return new ModbusFactory(logger: modbusLogger);
+                        }
+
+                        return new ModbusFactory();
+                    });
+
+                    //Device Services
+                    services.AddSingleton<DeviceService, TcpDeviceService>();
+                    services.AddSingleton<DeviceService, UdpDeviceService>();
                 });
         }
     }

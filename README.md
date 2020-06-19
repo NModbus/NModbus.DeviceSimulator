@@ -14,12 +14,17 @@ To specify the port:
 
 `docker run -it --rm -p 1000:1000 -e "DEVICE__PORT=1000" --name devicesim nmodbus/devicesim`
 
+To run UDP:
+
+`docker run -it --rm -p 502:502/udp -e "DEVICE__DEVICETYPE=UDP"  --name devicesim devicesim`
+
 # Environment Variables
 
-|Option|Default Value|
-|---|---|
-|DEVICE__ADDRESS | |
-|DEVICE__PORT | 502 |
-|DEVICE__UNITID| 1 |
-|DEVICE__VERBOSE| false |
+|Option|Default Value|Description|
+|---|---|---|
+|DEVICE__DEVICETYPE | Tcp | Tcp, Udp |
+|DEVICE__ADDRESS | | The address to use for Tcp. Usually not needed. |
+|DEVICE__PORT | 502 | The port to listen on (Applies to Tcp / Udp). |
+|DEVICE__UNITIDS| 1 | Comma delimited list of unit ids. |
+|DEVICE__VERBOSE| false | Additional logging. |
 
